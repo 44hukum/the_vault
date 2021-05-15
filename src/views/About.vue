@@ -1,5 +1,17 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <MDBBtn color="primary">
+    <MDBIcon icon="download"></MDBIcon>
+  </MDBBtn>
 </template>
+<script>
+
+  import { MDBBtn, MDBIcon } from "mdb-vue-ui-kit";
+
+  export default {
+      name:'User',
+    components: {
+      MDBBtn,
+      MDBIcon
+    }
+  };
+</script>

@@ -1,18 +1,67 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
 
+ <template>
+  <MDBContainer>
+    <!-- Nav bar heading -->
+    <NavBar />
+    <Projects v-bind:projects="projects"/>
+                
+  </MDBContainer>
+
+</template> 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import {MDBContainer} from 'mdb-vue-ui-kit';
+
+// Custom imports
+import Projects from "../components/Projects"
+import NavBar from "../components/NavBar"
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name:'Home',
+    components: {
+       MDBContainer,
+      //  user defined
+      Projects,
+      NavBar,
+      
+    },
+    data(){
+      return{
+       
+         activeComponent:'Projects',
+         projects :[
+        {
+          id:1,
+        },
+         {
+          id:1,
+        },
+         {
+          id:1,
+        },
+        {
+          id:1,
+        },
+         {
+          id:1,
+        },
+         {
+          id:1,
+        },{
+          id:1,
+        },
+         {
+          id:1,
+        },
+         {
+          id:1,
+        } 
+      ]
+      }
+    }
+  };
 </script>
+<style scoped>
+
+/** */
+</style>
