@@ -1,7 +1,7 @@
 <template>
   <MDBRow class="justify-content-between align-items-end">
     <MDBCol class="mt-3 mb-4" md="6" v-for="project in projects" :key="project.id">
-      <Project :project="project" :tag="from"/>
+      <Project :project="project" :tag="this.tag" :showall="'idea-text'"/>
      </MDBCol>
   </MDBRow>
 </template>
@@ -27,7 +27,7 @@ export default {
  },
  data(){
    return{
-     from:'gp'
+     tag:'gp'
    }
  }
 }

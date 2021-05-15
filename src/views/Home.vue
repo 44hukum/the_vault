@@ -2,7 +2,9 @@
  <template>
   <MDBContainer>
     <!-- Nav bar heading -->
+  <Profile />
     <NavBar />
+  
     <Projects v-bind:projects="projects"/>
                 
   </MDBContainer>
@@ -15,6 +17,7 @@ import {MDBContainer} from 'mdb-vue-ui-kit';
 // Custom imports
 import Projects from "../components/Projects"
 import NavBar from "../components/NavBar"
+import Profile from '../components/Navigation/Profile.vue'
 
 export default {
   name:'Home',
@@ -23,6 +26,7 @@ export default {
       //  user defined
       Projects,
       NavBar,
+        Profile
       
     },
     data(){

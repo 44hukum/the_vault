@@ -1,15 +1,15 @@
 <template>
   <MDBRow>       
-        <transition name="bounce">
+       
         <MDBCol >
             <MDBBtn color="link" class="link cv-btn cv-btn-search" @click="show = !show" rounded> <MDBIcon icon="search"></MDBIcon></MDBBtn>
-           <MDBBtnGroup v-if="show" class="button-group">
+           <MDBBtnGroup v-if="show" >
              <MDBBtn color="link" class="link cv-btn"  rounded>RECENT</MDBBtn>
              <MDBBtn color="link" class="link cv-btn" rounded>POPULAR</MDBBtn>
             </MDBBtnGroup>
                      
            </MDBCol>
-            </transition>
+          
            <transition name="bounce">
              <MDBCol v-if="!show">          
                  <MDBInput label="search" type="text" size="lg" autofocus/>
@@ -20,7 +20,7 @@
 
 <script>
 
-import { MDBBtn, MDBIcon,MDBInput,MDBCol, MDBRow, } from "mdb-vue-ui-kit";
+import { MDBBtn, MDBIcon,MDBInput,MDBCol, MDBRow } from "mdb-vue-ui-kit";
 export default {
     name:'NavBar',
     components:{
@@ -28,7 +28,8 @@ export default {
     MDBRow,
     MDBBtn,
     MDBIcon,
-    MDBInput,    
+    MDBInput, 
+  
     },
     data(){
         return {
@@ -61,7 +62,7 @@ h5{
 }
 
 .cv-btn-search{
-  text-align: right;
+  text-align: center;
 }
 
 /* Hide and unhide transition for search  */
@@ -77,7 +78,7 @@ h5{
     transform: scale(0);
   }
   50% {
-    transform: scale(1.25);
+    transform: scale(1.75);
   }
   100% {
     transform: scale(1);

@@ -1,20 +1,36 @@
 <template>
    <MDBCard class="c">
           <MDBCardBody rounded>
-          <MDBCardTitle>Special title treatment</MDBCardTitle>
-          <MDBCardText class="mt-3 idea-text">
-            Idea: With supporting text below as a natural lead-in to additional
-            content.With supporting text below as a natural lead-in to additional
+          <MDBCardTitle>{{project.id}}</MDBCardTitle>
+          <MDBCardText class="mt-3 " v-bind:class="showall">
+            <span class="" v-if="!showall"> Idea Description: </span>
+              <span class=""> Idea: </span>
+              
+             With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+            content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
+         
+            {{tag}}
             
           </MDBCardText>
          <!-- Button interaction -->
-         <Buttons />
+         <ButtonsA v-if="tag=='gp'"/>
+           
         </MDBCardBody>
       </MDBCard>
     
 </template>
 <script>
-import Buttons from './UserInteraction/Buttons.vue'
+
+import ButtonsA from './UserInteraction/ButtonsA.vue'
 // MDB imports
 import {  
   MDBCard,
@@ -31,16 +47,26 @@ export default {
     MDBCardBody,   
     MDBCardTitle,
     MDBCardText,
-    Buttons
+    ButtonsA,
+   
   
   },
   props: {
     project:Object,
-    from:String
-  }};
+    tag:String,
+    showall:String,
+  },
+  mounted() {
+   
+  },
+  };
 </script>
 
-<style scoped>  .idea-text{
+<style scoped> 
+  .c:hover{
+    background-color: #f0f8ff;
+}
+ .idea-text{
     text-align: initial;
     display: -webkit-box;
     max-width: 99%;
@@ -48,9 +74,10 @@ export default {
     -webkit-box-orient: vertical;
     overflow: hidden;
  
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   background:inherit;
   resize: vertical;
+  padding: 0.3em;
 }
 
 
