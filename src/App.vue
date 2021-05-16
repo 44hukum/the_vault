@@ -5,7 +5,7 @@
     <MDBRow gx="5">
       <MDBCol md="1">
         <div>
-        <router-link to="/"> <i class="fas fa-gem fa-lg Vault-temp" style="color: #050f1f">ault</i>  </router-link>
+        <router-link to="/"> <i class="fas fa-gem fa-lg Vault-temp" style="color: #050f1f">Vault</i>  </router-link>
           
         </div>
           <!-- <button type="" class="Home-Button">V</button> -->
