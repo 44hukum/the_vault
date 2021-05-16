@@ -8,11 +8,11 @@
                 <MDBBtn color="link" class="link cv-btn"  rounded>PROFILE</MDBBtn>
                <MDBBtn color="link" class="link cv-btn"  rounded>RECENT</MDBBtn>
              <MDBBtn color="link" class="link cv-btn" rounded>POPULAR</MDBBtn>
-            
+              
             </MDBBtnGroup>
                      
            </MDBCol>
-          
+            
            <transition name="bounce">
              <MDBCol v-if="!show">          
                  <MDBInput label="search" type="text" size="lg" autofocus/>
@@ -57,7 +57,7 @@ export default {
     
   }
   .inputSearch{
-    size: 100%;
+    size: 50%;
   }
 
 h5{
@@ -81,7 +81,7 @@ h5{
     transform: scale(0);
   }
   50% {
-    transform: scale(1.75);
+    transform: scale(1);
   }
   100% {
     transform: scale(1);

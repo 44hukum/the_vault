@@ -13,9 +13,11 @@
   <form>
     
   
-      <h2>Upload your content into the vault</h2>
+      <h2>Upload your content into:  The vault</h2>
     
       <p>This is dropdown</p>
+
+      
       <MDBInput label="Title" v-model="title" type="text" required/>
       <MDBFile v-model="featuredFile" multiple label="feature images" required/>
       

@@ -1,8 +1,8 @@
 <template>
-   <MDBCard class="c">
-          <MDBCardBody rounded>
+   <MDBCard class="c" v-bind:class="{note: tag == 'gp'} ">
+          <MDBCardBody rounded class="">
           <MDBCardTitle>{{project.id}}</MDBCardTitle>
-          <MDBCardText class="mt-3 " v-bind:class="showall">
+          <MDBCardText class="mt-2 lead " v-bind:class="showall">
             <span class="" v-if="!showall"> Idea Description: </span>
               <span class=""> Idea: </span>
               
@@ -17,7 +17,7 @@
             content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
             content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
             content.With supporting text below as a natural lead-in to additional  Idea: With supporting text below as a natural lead-in to additional
-         
+    
             {{tag}}
             
           </MDBCardText>
@@ -63,9 +63,9 @@ export default {
 </script>
 
 <style scoped> 
-  .c:hover{
-    background-color: #f0f8ff;
-}
+  /* .c:hover{
+    background-color: #fcf3f3;
+} */
  .idea-text{
     text-align: initial;
     display: -webkit-box;
@@ -77,6 +77,7 @@ export default {
   font-size: 1.1rem;
   background:inherit;
   resize: vertical;
+  font-weight:100;
   padding: 0.3em;
 }
 

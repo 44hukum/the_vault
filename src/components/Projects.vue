@@ -1,5 +1,5 @@
 <template>
-  <MDBRow class="justify-content-between align-items-start">
+  <MDBRow class="justify-content-between align-items-start gx-lg-5">
     <MDBCol class="mt-3 mb-4" md="4" v-for="project in projects" :key="project.id">
       <Project :project="project" :tag="this.tag" :showall="'idea-text'"/>
      </MDBCol>

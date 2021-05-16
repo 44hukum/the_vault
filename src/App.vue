@@ -1,9 +1,13 @@
 
 <template>
-  <MDBContainer id="app" fluid class="mt-5 user-select-none">
-    <MDBRow>
+
+   <MDBContainer id="app" fluid class="mt-5 user-select-none">
+    <MDBRow gx="5">
       <MDBCol md="1">
+        <div>
         <router-link to="/"> <i class="fas fa-gem fa-lg Vault-temp" style="color: #050f1f">ault</i>  </router-link>
+          
+        </div>
           <!-- <button type="" class="Home-Button">V</button> -->
       </MDBCol>
       <!-- Content -->
@@ -29,18 +33,26 @@
     </MDBRow>
    
   </MDBContainer>
+ 
 </template>
 
 <script>
 import { MDBContainer, MDBCol, MDBRow } from "mdb-vue-ui-kit";
 // import Vault from "./components/Navigation/Vault.vue";
+
 export default {
   name: "App",
   components: {
     // Vault,
     MDBContainer,
     MDBCol,
-    MDBRow
+    MDBRow,
+    
+  },
+  data(){
+    return{
+      home:true
+    }
   },
   mounted(){
     console.log(this.$refs.title);
@@ -48,7 +60,6 @@ export default {
 };
 </script>
 <style>
-
  
 body {
   margin: 0;
@@ -56,7 +67,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #5c5555;
+  color: #131212;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

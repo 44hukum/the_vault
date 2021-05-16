@@ -8,10 +8,10 @@
   import { MDBBtn, MDBIcon } from "mdb-vue-ui-kit";
 
   export default {
-      name:'User',
+      name:'About',
     components: {
       MDBBtn,
       MDBIcon
-    }
+    },
   };
 </script>

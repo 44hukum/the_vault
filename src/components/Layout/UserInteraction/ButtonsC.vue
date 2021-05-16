@@ -1,6 +1,6 @@
 <template>
   <div class="mt-2">
-    <Button />
+    
 
     <router-link to="ViewProject" style="text-decoration: none; color: inherit">
       <MDBBtn
@@ -17,14 +17,12 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
 import { MDBBtn } from "mdb-vue-ui-kit";
 import Icons from "./Icons/Icons.vue"
 export default {
   name: "ButtonsC",
   components: {
      MDBBtn,
-    Button,
     Icons,
   },
 
