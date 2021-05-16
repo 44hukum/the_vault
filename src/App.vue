@@ -3,13 +3,13 @@
   <MDBContainer id="app" fluid class="mt-5 user-select-none">
     <MDBRow>
       <MDBCol md="1">
-      <i class="fas fa-gem fa-lg Vault-temp" style="color: #050f1f">ault</i>
+        <router-link to="/"> <i class="fas fa-gem fa-lg Vault-temp" style="color: #050f1f">ault</i>  </router-link>
           <!-- <button type="" class="Home-Button">V</button> -->
       </MDBCol>
       <!-- Content -->
       <MDBCol md="10">
-         <router-link to="/">
-                   </router-link>
+      
+                 
     
         <!-- COL bhitra hunxha so 
         just focus on content -->
