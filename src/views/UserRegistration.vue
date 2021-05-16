@@ -37,6 +37,8 @@
                     <Signup v-show="!login"/>
                 </MDBCol>
             </MDBRow>
+           
+
     </MDBContainer>
 </template>
 

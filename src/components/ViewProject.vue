@@ -1,5 +1,5 @@
 <template>
- <MDBContainer >
+ <MDBContainer class="mb-5">
               <MDBRow class="justify-content-between align-items-end viewproject-row" >
                   <ButtonsC />
                 <MDBCol class="mt-1 mb-4" lg="8">

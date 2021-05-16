@@ -31,7 +31,10 @@
       </MDBCol>
       
     </MDBRow>
-   
+     <div style=" text-align: center; font-weight: 5" >
+              &copy; 2021- All right reserved. <a href="">rocketman. </a> <a href="">aarush. </a> <a href="">creators. </a> <a href="">herald brain.</a>
+         
+            </div>
   </MDBContainer>
  
 </template>
