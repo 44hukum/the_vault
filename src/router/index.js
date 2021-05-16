@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import ViewProject from '../components/ViewProject'
+import UploadIdea from '../components/Uploads/UploadIdea'
 
 const routes = [
   {
@@ -22,6 +23,12 @@ const routes = [
   name: "viewproject",
   component: ViewProject,
 },
+{
+  path:"/upload",
+  name:'uploadIdea',
+  component: UploadIdea
+  
+}
 ];
 
 const router = createRouter({

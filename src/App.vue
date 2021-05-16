@@ -1,47 +1,96 @@
 
 <template>
-
-  <div id="nav">
-    <router-link to="/"><vault /></router-link>
+  <MDBContainer id="app" fluid class="mt-5 user-select-none">
+    <MDBRow>
+      <MDBCol md="1">
+      <i class="fas fa-gem fa-lg Vault-temp" style="color: #050f1f">ault</i>
+          <!-- <button type="" class="Home-Button">V</button> -->
+      </MDBCol>
+      <!-- Content -->
+      <MDBCol md="10">
+         <router-link to="/">
+                   </router-link>
     
-    <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> -->
-    <router-view />
-     
-  </div>
+        <!-- COL bhitra hunxha so 
+        just focus on content -->
+       <router-view />
+
+
+
+
+      </MDBCol>
+
+      <!-- Content END -->
+         <MDBCol md="1">
+
+           <!-- <button type="" class="fancy-border-radius">Upload</button> -->
+      </MDBCol>
+      
+    </MDBRow>
+   
+  </MDBContainer>
 </template>
 
 <script>
-import Vault from './components/Navigation/Vault.vue'
+import { MDBContainer, MDBCol, MDBRow } from "mdb-vue-ui-kit";
+// import Vault from "./components/Navigation/Vault.vue";
 export default {
-  name:'App',
-  components:{
-    Vault,
+  name: "App",
+  components: {
+    // Vault,
+    MDBContainer,
+    MDBCol,
+    MDBRow
+  },
+  mounted(){
+    console.log(this.$refs.title);
   }
-}
+};
 </script>
 <style>
 
-html {
-  margin: 2em;
+ 
+body {
+  margin: 0;
+  font-family: var(--mdb-font-roboto);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #5c5555;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   /* cursor: pointer; */
+    /* fallback for old browsers */
+  background: #fff1eb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, rgba(255, 241, 235, 0.15), rgba(172, 224, 249, 0.15));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, rgba(255, 241, 235, 0.15), rgba(172, 224, 249, 0.15))
 }
-body{
-    margin: 0;
-    font-family: var(--mdb-font-roboto);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #5c5555;
-    background-color: #fff;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
+.Home-Button{
+  border-radius: 52% 48% 48% 52% / 15% 14% 86% 85%;
+
+  /* These are ADDITIONAL styles - add them if you want an object exactly like in the demo above */
+  width: 40px;
+  height: 50px;
+  background: #ad5389;
+  background: -webkit-linear-gradient(to right,
+      #3c1053,
+      #ad5389);
+  background: linear-gradient(to right,
+      #3c1053,
+      #ad5389);
+      font-size: 1.4em;
 }
-
-
 /* Responsive */
 @media (max-width: 768px) {
-  
+}
+#app{
+  transform: scale(1em);
 }
 
 </style>

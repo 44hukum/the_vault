@@ -1,32 +1,33 @@
 
  <template>
   <MDBContainer>
-    <!-- Nav bar heading -->
-  <Profile />
-    <NavBar />
-  
-    <Projects v-bind:projects="projects"/>
+    <MDBRow>
+        <NavBar />
+
+    </MDBRow>
+    <Projects v-bind:projects="projects" class="mt-3"/>
                 
   </MDBContainer>
 
 </template> 
 <script>
 
-import {MDBContainer} from 'mdb-vue-ui-kit';
+import {MDBContainer,MDBRow} from 'mdb-vue-ui-kit';
 
 // Custom imports
 import Projects from "../components/Projects"
 import NavBar from "../components/NavBar"
-import Profile from '../components/Navigation/Profile.vue'
+// import Profile from '../components/Navigation/Profile.vue'
 
 export default {
   name:'Home',
     components: {
        MDBContainer,
+       MDBRow,
       //  user defined
       Projects,
       NavBar,
-        Profile
+        // Profile
       
     },
     data(){
@@ -35,7 +36,7 @@ export default {
          activeComponent:'Projects',
          projects :[
         {
-          id:1,
+          id:"This it thie thing ",
         },
          {
           id:1,

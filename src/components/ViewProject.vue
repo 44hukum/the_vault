@@ -2,17 +2,18 @@
  <MDBContainer >
               <MDBRow class="justify-content-between align-items-end viewproject-row" >
                   <ButtonsC />
-                <MDBCol class="mt-1 mb-4" md="6">
+                <MDBCol class="mt-1 mb-4" lg="8">
                 
-                  <Project v-bind:project="project" :tag="this.tag" />
+                 <Carousel />
+                   
                   
                 </MDBCol> 
                 
-                <MDBCol class="align-self-start" md="6">
+                <MDBCol class="align-self-start" lg="4">
                    
                 </MDBCol>
-                 <MDBCol md="6">
-                 <Carousel />
+                 <MDBCol md="8">
+                 <Project v-bind:project="project" :tag="this.tag" />
                 </MDBCol>  
              </MDBRow>
 
