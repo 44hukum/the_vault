@@ -30,6 +30,11 @@ export default {
         },
          {
           id:"Cook food with our heat",
+        }, {
+          id:"Decentralized digital college ",
+        },
+         {
+          id:"Cook food with our heat",
         }]
         
       }
@@ -38,4 +43,7 @@ export default {
 </script>
 
 <style scoped>
+body{
+  scroll-behavior: smooth;
+}
 </style>

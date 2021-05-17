@@ -1,37 +1,36 @@
 
 <template>
 
-   <MDBContainer id="app" fluid class="mt-5 user-select-none">
+   <MDBContainer id="app" fluid class="mt-3 user-select-none">
     <MDBRow gx="5">
-      <MDBCol md="1" class="order-1 order-md-1">
-        <div>
+      
+      <MDBCol md="1" class="order-1 order-md-1 col-logo">
+        <div class="text-center">
         <router-link to="/"> <i class="fas fa-gem fa-lg Vault-temp" style="color: #050f1f">Vault</i>  </router-link>
           
         </div>
           <!-- <button type="" class="Home-Button">V</button> -->
       </MDBCol>
+
       <!-- Content -->
-      <MDBCol md="10" class="order-3 order-md-2">
-      
-                 
+      <MDBCol md="10" class="order-3 order-md-2 mt-5">
+                   
     
         <!-- COL bhitra hunxha so 
         just focus on content -->
        <router-view />
-
-
-
-
-      </MDBCol>
+     </MDBCol>
 
       <!-- Content END -->
-         <MDBCol md="1" class="order-2 order-md-3">
-
-          <router-link to="/upload"> <i class="fas fa-upload" style="color: #050f1f" ></i></router-link>
+         <MDBCol md="1" class="d-flex align-self-start order-2 order-md-3 col-logo">
+           
+             
+            <UserManagement />  
+            
       </MDBCol>
       
     </MDBRow>
-     <div style=" text-align: center; font-weight: 5" >
+     <div style=" text-align: center; font-weight: 2" class="rights">
               &copy; 2021- All right reserved. <a href="">rocketman. </a> <a href="">aarush. </a> <a href="">creators. </a> <a href="">herald brain.</a>
          
             </div>
@@ -42,6 +41,7 @@
 <script>
 import { MDBContainer, MDBCol, MDBRow } from "mdb-vue-ui-kit";
 // import Vault from "./components/Navigation/Vault.vue";
+import UserManagement from './components/Layout/UserInteraction/Dropdown/UserManagemnt.vue'
 
 export default {
   name: "App",
@@ -50,6 +50,8 @@ export default {
     MDBContainer,
     MDBCol,
     MDBRow,
+    UserManagement,
+ 
     
   },
   data(){
@@ -62,7 +64,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
  
 body {
   margin: 0;
@@ -82,27 +84,18 @@ body {
   background: -webkit-linear-gradient(to bottom, rgba(255, 241, 235, 0.15), rgba(172, 224, 249, 0.15));
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to bottom, rgba(255, 241, 235, 0.15), rgba(172, 224, 249, 0.15))
+  background: linear-gradient(to bottom, rgba(255, 241, 235, 0.15), rgba(172, 224, 249, 0.15));
+  scroll-behavior: smooth;
+  background-repeat: no-repeat;
+ 
 }
 
-.Home-Button{
-  border-radius: 52% 48% 48% 52% / 15% 14% 86% 85%;
-
-  /* These are ADDITIONAL styles - add them if you want an object exactly like in the demo above */
-  width: 40px;
-  height: 50px;
-  background: #ad5389;
-  background: -webkit-linear-gradient(to right,
-      #3c1053,
-      #ad5389);
-  background: linear-gradient(to right,
-      #3c1053,
-      #ad5389);
-      font-size: 1.4em;
-}
 /* Responsive */
 @media (max-width: 768px) {
 }
 
+.col-logo{
+  height: fit-content;
+}
 
 </style>

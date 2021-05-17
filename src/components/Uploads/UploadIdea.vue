@@ -1,5 +1,5 @@
 <template>
-<div class="mb-3">
+<div class="mb-2">
             <!-- Progress bar -->
           <MDBProgress :height="15">
            <MDBProgressBar :value="20" :min="5" :max="100" striped animated  bg="success">
@@ -10,7 +10,7 @@
         </MDBProgressBar>
   </MDBProgress>
   <!-- end of the progress bar -->
-  <form class="mt-3">
+  <form class="mt-2">
     
   
       <h2>upload your content into:  The vault</h2>

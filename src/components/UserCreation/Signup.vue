@@ -42,7 +42,7 @@
    
           <MDBBtn color="primary" type="submit" class="w-100 mb-3" id="loginB">Sign up</MDBBtn>
                     <div class="login">
-             or <a href="#">Login </a>
+             
         
         </div>
 

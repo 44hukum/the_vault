@@ -10,7 +10,7 @@
                 </MDBCol> 
                 <!-- Profiles -->
                 <MDBCol class="order-1 order-lg-3" lg="4">
-                    By:
+                   
                     <UserProfile v-bind:show="false"/>
                     <!-- Chatting option availablr -->
                     
