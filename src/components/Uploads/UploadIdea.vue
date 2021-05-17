@@ -1,30 +1,37 @@
 <template>
-<div>
+<div class="mb-3">
             <!-- Progress bar -->
-          <MDBProgress :height="25">
+          <MDBProgress :height="15">
            <MDBProgressBar :value="20" :min="5" :max="100" striped animated  bg="success">
-               Images upload: 100% 
+               Images uploading: 5% 
     </MDBProgressBar>
     <MDBProgressBar :value="20" :min="5" :max="100" striped animated bg="info">
-        codebase upload: 100%
+        codebase uploading: 5%
         </MDBProgressBar>
   </MDBProgress>
   <!-- end of the progress bar -->
-  <form>
+  <form class="mt-3">
     
   
-      <h2>Upload your content into:  The vault</h2>
+      <h2>upload your content into:  The vault</h2>
     
-      <p>This is dropdown</p>
+               <select class="selection mt-2" >
+                        <optgroup label="Application Type">
+                            <option value="12">web application </option>
+                            <option value="13">mobile application</option>
+                            <option value="14">embedded system</option>
+                            <option value="15">other</option>
+                        </optgroup>
+                    </select>
 
       
-      <MDBInput label="Title" v-model="title" type="text" required/>
-      <MDBFile v-model="featuredFile" multiple label="feature images" required/>
+      <input  name=""  v-model="title" required id="input" placeholder="Title"/>
+      <MDBFile v-model="featuredFile" multiple label="Upload Featured images" id="input"  required/>
       
-      <MDBTextarea cols="30" rows="10" placeholder="About your idea" v-model="idea" required/>
-     <MDBFile v-model="featuredFile" multiple label="Code Base" required/>
+      <MDBTextarea cols="30" rows="9" placeholder="About your idea" v-model="idea" required id="input-area"/>
+     <MDBFile v-model="featuredFile" multiple label="Upload code Base (.zip)" required id="input"/>
 
-      <MDBBtn color="primary" type="submit" class="w-100 ">upload</MDBBtn>
+       <MDBBtn color="primary" type="submit" class="w-100 " id="loginB">Upload</MDBBtn>
   </form>
 </div>
            
@@ -34,7 +41,7 @@
 
 <script>
 import {
-  MDBInput,
+ 
   MDBTextarea,
   MDBFile,
   MDBBtn,
@@ -46,7 +53,6 @@ import {
  export default {
     name:'UploadIdea',
     components:{
-      MDBInput,
       MDBTextarea,
       MDBFile,
       MDBBtn,
@@ -66,5 +72,40 @@ import {
 </script>
 
 <style>
+   #input{
+    width: 100%;
+    height: 44px;
+    border: 2px solid;
+    position: relative;
+     margin-bottom: 1em;
+    border-color: #242424;
+    color: #252525;
+    padding-left: 3px;
+ }
 
+ #input-area{
+     width: 100%;
+   border: 2.5px solid;
+    position: relative;
+  
+    margin-bottom: 1em;
+    border-color: #242424;
+    color: #252525;
+ }
+ .selection{
+    width: 100%;
+    height: 44px;
+    border: 2px solid;
+    position: relative;
+   margin-bottom: 1em;
+    border-color: #242424;
+    color: #252525;
+    padding-left: 3px;
+ }
+
+  #loginB{
+     background-color: #204157;
+     font-size: 1em;
+     text-transform: capitalize;
+ }
 </style>

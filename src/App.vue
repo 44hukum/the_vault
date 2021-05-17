@@ -103,8 +103,6 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
 }
-#app{
-  transform: scale(1em);
-}
+
 
 </style>

@@ -3,7 +3,7 @@ import Home from "../views/Home.vue";
 import ViewProject from '../components/ViewProject'
 import UploadIdea from '../components/Uploads/UploadIdea'
 import UserRegistration from '../views/UserRegistration'
-
+import Profile from '../views/Profile'
 const routes = [
   {
     path: "/",
@@ -36,6 +36,11 @@ const routes = [
   name:'userregistration',
   component: UserRegistration
   
+},
+{
+  path:'/profile',
+  name:'profile',
+  component: Profile
 }
 
 ];

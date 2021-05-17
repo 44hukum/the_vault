@@ -5,7 +5,7 @@
             <MDBBtn color="link" class="link cv-btn cv-btn-search" @click="show = !show" rounded> <MDBIcon icon="search"></MDBIcon></MDBBtn>
            <MDBBtnGroup v-if="show" >
              <MDBBtn color="link" class="link cv-btn" rounded>About</MDBBtn>
-                <MDBBtn color="link" class="link cv-btn"  rounded>PROFILE</MDBBtn>
+               <router-link to="/profile"> <MDBBtn color="link" class="link cv-btn"  rounded>PROFILE</MDBBtn></router-link>
                <MDBBtn color="link" class="link cv-btn"  rounded>RECENT</MDBBtn>
              <MDBBtn color="link" class="link cv-btn" rounded>POPULAR</MDBBtn>
               

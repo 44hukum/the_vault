@@ -36,22 +36,22 @@ export default {
          activeComponent:'Projects',
          projects :[
         {
-          id:"This it thie thing ",
+          id:"Decentralized digital college ",
         },
          {
-          id:1,
+          id:"Cook food with our heat",
         },
          {
-          id:1,
+          id:"colonize the mars",
         },
         {
-          id:1,
+          id:"How to cook water ?",
         },
          {
-          id:1,
+          id:"Genetic encoding",
         },
          {
-          id:1,
+          id:"Cellular automation",
         },{
           id:1,
         },
