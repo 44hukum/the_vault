@@ -3,7 +3,7 @@
 
    <MDBContainer id="app" fluid class="mt-5 user-select-none">
     <MDBRow gx="5">
-      <MDBCol md="1">
+      <MDBCol md="1" class="order-1 order-md-1">
         <div>
         <router-link to="/"> <i class="fas fa-gem fa-lg Vault-temp" style="color: #050f1f">Vault</i>  </router-link>
           
@@ -11,7 +11,7 @@
           <!-- <button type="" class="Home-Button">V</button> -->
       </MDBCol>
       <!-- Content -->
-      <MDBCol md="10">
+      <MDBCol md="10" class="order-3 order-md-2">
       
                  
     
@@ -25,9 +25,9 @@
       </MDBCol>
 
       <!-- Content END -->
-         <MDBCol md="1">
+         <MDBCol md="1" class="order-2 order-md-3">
 
-           <!-- <button type="" class="fancy-border-radius">Upload</button> -->
+          <router-link to="/upload"> <i class="fas fa-upload" style="color: #050f1f" ></i></router-link>
       </MDBCol>
       
     </MDBRow>

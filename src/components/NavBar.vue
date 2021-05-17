@@ -8,6 +8,8 @@
                <router-link to="/profile"> <MDBBtn color="link" class="link cv-btn"  rounded>PROFILE</MDBBtn></router-link>
                <MDBBtn color="link" class="link cv-btn"  rounded>RECENT</MDBBtn>
              <MDBBtn color="link" class="link cv-btn" rounded>POPULAR</MDBBtn>
+            <router-link to="/user"> <MDBBtn color="link" class="link cv-btn" rounded>SIGNUP</MDBBtn></router-link>
+             <MDBBtn color="link" class="link cv-btn" rounded>LOGIN</MDBBtn>
               
             </MDBBtnGroup>
                      

@@ -1,19 +1,24 @@
 <template>
  <MDBContainer class="mb-5">
-              <MDBRow class="justify-content-between align-items-end viewproject-row" >
-                  <ButtonsC />
-                <MDBCol class="mt-1 mb-4" lg="8">
-                
-                 <Carousel />
-                   
-                  
-                </MDBCol> 
-                
-                <MDBCol class="align-self-start" lg="4">
-                   
-                </MDBCol>
-                 <MDBCol md="8">
+              <MDBRow class="justify-content-between align-items-center viewproject-row" >
+                  <ButtonsC class="order-2 order-lg-1 "/>
+                  <!-- Featured Images -->
+                <MDBCol class="mt-1 mb-4 order-4 order-lg-2" lg="8">
                  <Project v-bind:project="project" :tag="this.tag" />
+                
+                                  
+                </MDBCol> 
+                <!-- Profiles -->
+                <MDBCol class="order-1 order-lg-3" lg="4">
+                    By:
+                    <UserProfile v-bind:show="false"/>
+                    <!-- Chatting option availablr -->
+                    
+                </MDBCol>
+
+                <!-- Description -->
+                 <MDBCol md="8" class="order-5 order-lg-4">
+                 <Carousel />
                 </MDBCol>  
              </MDBRow>
 
@@ -30,7 +35,7 @@
 import ButtonsC from './Layout/UserInteraction/ButtonsC.vue'
 import Carousel from './Layout/UserInteraction/Carousel/Featuredfiles.vue'
 import Project from "./Layout/Project"
-
+import UserProfile from "../components/Layout/User/UserProfile.vue"
 // Featured files
 
 import {
@@ -50,8 +55,9 @@ export default {
     MDBCol,
      ButtonsC,
      MDBContainer,
-    Carousel
-     
+    Carousel,
+    UserProfile
+
   },
   data(){
       return{
