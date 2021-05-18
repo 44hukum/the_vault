@@ -1,7 +1,7 @@
 <template>
 <div>
     <h2>Let's get your setup for: The Vault</h2>
-      <form  tag="form" class="g-3 needs-validation" novalidate @submit.prevent="checkForm">    
+      <form  tag="form" class="needs-validation" novalidate @submit.prevent="checkForm">    
       <MDBInput 
             type="text" 
             size="lg" 
@@ -91,7 +91,7 @@ export default {
 <style scoped>
  #input{
     width: 100%;
-    height: 44px;
+  
     border: 2px solid;
     position: relative;
   

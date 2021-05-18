@@ -12,9 +12,11 @@
      
    
               <router-link to="/upload" >
-              <MDBBtn color="dark" floating id="uploadbutton">
+              <MDBBtn 
+              style="background-color: rgb(255, 172, 68);" color="light"  id="uploadbutton">
                
             <MDBIcon icon="upload"></MDBIcon>
+                Upload
               </MDBBtn>
               </router-link>
          

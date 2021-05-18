@@ -1,6 +1,6 @@
 <template>
   <MDBDropdown v-model="dropdown1" dropstart id="dropdown">
-    <MDBDropdownToggle @click="dropdown1 = !dropdown1" color="dark" size="sm" >
+    <MDBDropdownToggle @click="dropdown1 = !dropdown1" color="link" size="sm" >
       </MDBDropdownToggle>
     
     <MDBDropdownMenu class="dropdonMenu" color="light" :animation="false">
@@ -17,17 +17,17 @@
       </MDBDropdownItem>
         <MDBDropdownItem divider />
 
-        
+<!--         
       <MDBDropdownItem>
             <router-link to="/user">
           <MDBBtn color="link" class="link cv-btn w-100"><i class="fas fa-comment-dots"></i> Give feedback</MDBBtn>
         </router-link>
-      </MDBDropdownItem>
-      <MDBDropdownItem>
+      </MDBDropdownItem> -->
+      <!-- <MDBDropdownItem>
             <router-link to="/user">
           <MDBBtn color="link" class="link cv-btn w-100"><i class="fa fa-info-circle" aria-hidden="true"></i> About</MDBBtn>
         </router-link>
-      </MDBDropdownItem>
+      </MDBDropdownItem> -->
         <MDBDropdownItem>
             <router-link to="/user">
           <MDBBtn color="link" class="link cv-btn w-100"><i class="fa fa-question-circle" aria-hidden="true"></i> Help& Support</MDBBtn>
