@@ -1,14 +1,25 @@
 <template>
   <MDBRow>
     <MDBCol v-if="!show" class="d-flex flex-row">
-      <MDBBtn color="link" class="link cv-btn cv-btn-search" @click="show = !show">
-        <MDBIcon icon="search"></MDBIcon>
-      </MDBBtn>
-      <MDBInput class="w-100" label="search" type="text" autofocus />
+      <MDBInput
+        inputGroup
+        aria-label="search"
+        placeholder="search"
+        v-model="input3"
+        autofocus
+        class="link cv-btn"
+      >
+        <template v-slot:prepend>
+          <MDBBtn color="link" class="link cv-btn cv-btn-search" @click="show = !show">
+            <MDBIcon icon="search"></MDBIcon>
+          </MDBBtn>
+        </template>
+      </MDBInput>
     </MDBCol>
+
     <MDBCol>
       <MDBBtnGroup v-if="show">
-        <MDBBtn color="link" class="link cv-btn cv-btn-search" @click="show = !show" rounded>
+        <MDBBtn color="link" class="link cv-btn cv-btn-search" @click="show = !show">
           <MDBIcon icon="search"></MDBIcon>
         </MDBBtn>
         <MDBBtn color="link" class="link cv-btn" rounded>RECENT</MDBBtn>
@@ -27,15 +38,14 @@
           <MDBIcon v-if="dropdown" icon="caret-up" iconStyle="fas" size="lg" />
         </MDBBtn>
         <!-- Data bar -->
-       <MDBCollapse id="submenuContent" v-model="submenu" :duration="100">
+        <MDBCollapse id="submenuContent" v-model="submenu" :duration="100">
           <div class="mt-3">
             <Data />
           </div>
         </MDBCollapse>
       </MDBBtnGroup>
-     
     </MDBCol>
- 
+
     <!-- Search Bar edit -->
 
     <!-- End of the search bar -->

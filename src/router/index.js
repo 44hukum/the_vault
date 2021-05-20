@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import ViewProject from '../components/ViewProject'
 import UploadIdea from '../components/Uploads/UploadIdea'
-import UserRegistration from '../views/UserRegistration'
 import Profile from '../views/Profile'
 const routes = [
   {
@@ -31,12 +30,8 @@ const routes = [
   component: UploadIdea
   
 },
-{
-  path:"/user",
-  name:'userregistration',
-  component: UserRegistration
-  
-},
+
+
 {
   path:'/profile',
   name:'profile',
