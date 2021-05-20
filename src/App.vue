@@ -1,33 +1,22 @@
 
 <template>
 
-   <MDBContainer id="app" fluid class="mt-3 user-select-none">
+   <MDBContainer id="app" class="mt-3 user-select-none">
     <MDBRow gx="5">
       
-      <MDBCol md="1" class="order-1 order-md-1 col-logo">
-        <div class="text-center">
+            <!-- Content -->
+      <MDBCol md="" class="">
+               <div class="text-center">
         <router-link to="/"> <i class="fas fa-gem fa-lg Vault-temp" style="color: #050f1f">Vault</i>  </router-link>
           
-        </div>
-          <!-- <button type="" class="Home-Button">V</button> -->
-      </MDBCol>
-
-      <!-- Content -->
-      <MDBCol md="10" class="order-3 order-md-2 mt-5">
-                   
+        </div>     
     
         <!-- COL bhitra hunxha so 
         just focus on content -->
-       <router-view />
+       <router-view class="mt-5" />
      </MDBCol>
 
-      <!-- Content END -->
-         <MDBCol md="1" class="d-flex align-self-start order-2 order-md-3 col-logo">
-           
-             
-            <UserManagement />  
-            
-      </MDBCol>
+    
       
     </MDBRow>
      <div style=" text-align: center; font-weight: 2" class="rights">
@@ -41,7 +30,7 @@
 <script>
 import { MDBContainer, MDBCol, MDBRow } from "mdb-vue-ui-kit";
 // import Vault from "./components/Navigation/Vault.vue";
-import UserManagement from './components/Layout/UserInteraction/Dropdown/UserManagemnt.vue'
+// import UserManagement from './components/Layout/UserInteraction/Dropdown/UserManagemnt.vue'
 
 export default {
   name: "App",
@@ -50,7 +39,7 @@ export default {
     MDBContainer,
     MDBCol,
     MDBRow,
-    UserManagement,
+    // UserManagement,
  
     
   },
