@@ -22,20 +22,20 @@
           aria-controls="submenuContent"
           :aria-expanded="submenu"
           rounded
-         >
-          <MDBIcon v-if="!dropdown" icon="caret-down" iconStyle="fas" size="lg"/>
+        >
+          <MDBIcon v-if="!dropdown" icon="caret-down" iconStyle="fas" size="lg" />
           <MDBIcon v-if="dropdown" icon="caret-up" iconStyle="fas" size="lg" />
         </MDBBtn>
-        <MDBCollapse id="submenuContent"  v-model="submenu" :duration="100">
+        <!-- Data bar -->
+       <MDBCollapse id="submenuContent" v-model="submenu" :duration="100">
           <div class="mt-3">
             <Data />
           </div>
         </MDBCollapse>
       </MDBBtnGroup>
-      <!-- Data bar -->
-      
+     
     </MDBCol>
-
+ 
     <!-- Search Bar edit -->
 
     <!-- End of the search bar -->
@@ -44,8 +44,15 @@
 
 <script>
 import Data from "./Cret/Data.vue";
-import { MDBBtn, MDBIcon, MDBInput, MDBCol, MDBRow,  MDBCollapse, } from "mdb-vue-ui-kit";
-import {ref} from "vue";
+import {
+  MDBBtn,
+  MDBIcon,
+  MDBInput,
+  MDBCol,
+  MDBRow,
+  MDBCollapse
+} from "mdb-vue-ui-kit";
+import { ref } from "vue";
 export default {
   name: "NavBar",
   components: {
@@ -55,21 +62,21 @@ export default {
     MDBIcon,
     MDBInput,
     Data,
-      MDBCollapse,
+    MDBCollapse
   },
   data() {
     return {
       show: true,
-      dropdown:false
+      dropdown: false
     };
   },
-   setup() {
-      const submenu = ref(false);
+  setup() {
+    const submenu = ref(false);
 
-      return {
-        submenu
-      }
-    }
+    return {
+      submenu
+    };
+  }
 };
 </script>
 
